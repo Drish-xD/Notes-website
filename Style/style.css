@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+@font-face {
+  font-family: "muli";
+  src: url("../Assets/Fonts/muli-regular.woff2") format("woff2"),
+    url("../Assets/Fonts/muli-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "spacemono";
+  src: url("../Assets/Fonts/spacemono-regular.woff2") format("woff2"),
+    url("../Assets/Fonts/spacemono-regular.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  /* background-image: url(../Assets/Images/Vorderrhein.svg); */
+}
+
+/* Custom Scroll bar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #0f0f0fcc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0f0f0f;
+}
+
+.overflow {
+  overflow-x: hidden;
+}
+
+.navbar-style {
+  background-color: rgb(20, 20, 20);
+}
+
+.navbar-style a {
+  margin: auto 25px;
+}
+
+.nav-brand {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-brand p{
+  font: 500 35px "muli";
+  color: #f0f0f0;
+  margin: 0;
+}
+
+.nav-brand img{
+  width: 30%;
+  display: flex;
+  align-self: center;
+}
+
+.nav-link {
+  color: #f0f0f0;
+  text-decoration: none;
+  font: 300 25px "spacemono";
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-end;
+  height: 90vh;
+  width: 100%;
+  padding: 50px;
+}
+
+.main-text h1 {
+  font: 600 100px "Oswald";
+  letter-spacing: 1rem;
+}
+
+.main-text p {
+  font: 300 25px "spacemono";
+  word-spacing: 0.6rem;
+  line-height: 2.5rem;
+}
+
+.main-img {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-img img {
+  width: 100%;
+}
+
+.box {
+  height: 200px;
+  width: 400px;
+  margin: 3rem 4rem;
+  align-items: center;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 25px 25px 50px #a8a8a8, -25px -25px 50px #ffffff;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.box:hover {
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 25px 25px 50px #a8a8a8, -25px -25px 50px #ffffff;
+}
+
+.notes-link {
+  text-decoration: none;
+  font: 600 30px "spacemono";
+  letter-spacing: 0.2rem;
+  color: #0f0f0f;
+  padding: 50px;
+}
+
+.notes-link:hover {
+  color: #0f0f0f;
+}
+
+footer {
+  background-color: #111111;
+  padding: 20px;
+  font-family: "spacemono";
+  color: #f8f8f8;
+}
