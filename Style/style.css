@@ -1,4 +1,7 @@
+/* fonts */
+
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
 
 @font-face {
   font-family: "muli";
@@ -18,9 +21,8 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #f5f5f5;
-  /* background-image: url(../Assets/Images/Vorderrhein.svg); */
+.overflow {
+  overflow-x: hidden;
 }
 
 /* Custom Scroll bar */
@@ -42,9 +44,7 @@ body {
   background-color: #0f0f0f;
 }
 
-.overflow {
-  overflow-x: hidden;
-}
+/* Navbar */
 
 .navbar-style {
   background-color: rgb(20, 20, 20);
@@ -55,32 +55,40 @@ body {
 }
 
 .nav-brand {
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
 }
 
-.nav-brand p{
-  font: 500 35px "muli";
-  color: #f0f0f0;
-  margin: 0;
+.nav-brand p {
+  font: 35px "Fredericka the Great";
+  color: #f8f8f8;
+  margin: 0 5px;
 }
 
-.nav-brand img{
-  width: 30%;
-  display: flex;
-  align-self: center;
+.nav-brand img {
+  width: 20%;
 }
 
 .nav-link {
-  color: #f0f0f0;
+  color: #f8f8f8;
   text-decoration: none;
   font: 300 25px "spacemono";
 }
 
+.nav-link:hover {
+  color: #a77295;
+}
+
+/* main page / section 1 */
+
 .wrapper {
   display: flex;
   flex-direction: row;
+  background-image: url("../Assets/Images/Vorderrhein.svg");
+  background-blend-mode: soft-light;
+  background-color: #b7b1b5;
 }
 
 .main-text {
@@ -88,6 +96,7 @@ body {
   flex-direction: column;
   align-items: left;
   justify-content: flex-end;
+  color: #0f0f0f;
   height: 90vh;
   width: 100%;
   padding: 50px;
@@ -115,34 +124,61 @@ body {
   width: 100%;
 }
 
-.box {
-  height: 200px;
-  width: 400px;
-  margin: 3rem 4rem;
-  align-items: center;
-  background: linear-gradient(145deg, #cacaca, #f0f0f0);
-  box-shadow: 25px 25px 50px #a8a8a8, -25px -25px 50px #ffffff;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
+/* section 2 - 3 */
+
+#section-2,
+#section-3 {
+  background-image: url(../Assets/Images/swirl_pattern.png);
 }
 
-.box:hover {
-  background: linear-gradient(145deg, #f0f0f0, #cacaca);
-  box-shadow: 25px 25px 50px #a8a8a8, -25px -25px 50px #ffffff;
+h2 {
+  background: #f8f8f8c0 url(../Assets/Images/Vorderrhein.svg);
+  background-position: center;
+  font: 600 60px "Oswald";
+  letter-spacing: 0.6rem;
+  text-align: center;
+  color: #0f0f0f;
+}
+
+.button {
+  height: 200px;
+  width: 400px;
+  border-radius: 50px;
+  margin: 3rem 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.25s;
 }
 
 .notes-link {
   text-decoration: none;
   font: 600 30px "spacemono";
   letter-spacing: 0.2rem;
-  color: #0f0f0f;
   padding: 50px;
+  color: #0f0f0f;
+  text-align: center;
+  background-color: #f0f0f0;
+  filter: drop-shadow(3.4px 3.4px 3.4px #b7b1b5) drop-shadow(-3.4px -3.4px 3.4px #dcdcdc);
+  -webkit-filter: drop-shadow(3.4px 3.4px 3.4px #b7b1b5) drop-shadow(-3.4px -3.4px 3.4px #f7f7f7);
+  box-shadow: inset 4.3px 4.3px 7px #fff;
 }
 
 .notes-link:hover {
-  color: #0f0f0f;
+  color: #a77295;
+  filter: drop-shadow(5px 5px 3.4px #b7b1b5);
+  -webkit-filter: drop-shadow(5px 5px 3.4px #b7b1b5);
+  box-shadow: inset 2.5px 2.5px 2.5px #fff;
 }
+
+.notes-link:active {
+  filter: drop-shadow(0px 0px 0px rgb(183, 177, 181));
+  -webkit-filter: drop-shadow(0px 0px 0px rgb(183, 177, 181));
+  box-shadow: inset 4.3px 4.3px 7px #b7b1b5;
+}
+
+/* footer */
 
 footer {
   background-color: #111111;
