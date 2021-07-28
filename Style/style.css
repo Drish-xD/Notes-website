@@ -44,7 +44,63 @@
   background-color: #0f0f0f;
 }
 
-/* Navbar */
+.theme-toggle {
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  display: block;
+  width: 60px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 20px 0 0 20px;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  transition: all 400ms ease;
+  z-index: 1000;
+}
+
+.theme-toggle.dawn {
+  background: rgb(246, 247, 249);
+  filter: drop-shadow(3.4px 3.4px 3.4px rgb(184, 178, 182)) drop-shadow(-3.4px -3.4px 3.4px #dcdcdc);
+  -webkit-filter: drop-shadow(3.4px 3.4px 3.4px #b7b1b5) drop-shadow(-3.4px -3.4px 3.4px #dcdcdc);
+  box-shadow: inset 4.3px 4.3px 7px #fff;
+}
+
+.theme-toggle.dawn .toggle-glyph {
+  fill: #1f242a;
+  transform: rotate(360deg);
+}
+
+.theme-toggle.dusk {
+  background: #1f242a;
+  filter: drop-shadow(3.4px 3.4px 3.4px #3a3a3a4d) drop-shadow(-3.4px -3.4px 3.4px #00000033);
+  /* -webkit-filter: drop-shadow(3.4px 3.4px 3.4px #242424) drop-shadow(-3.4px -3.4px 3.4px #5e5e5e); */
+  box-shadow: inset 4.3px 4.3px 7px #303030;
+}
+
+.theme-toggle.dusk .toggle-glyph {
+  transform: rotate(180deg);
+  fill: #f5f6f8;
+}
+
+.theme-toggle.dusk .toggle-glyph:hover,
+.theme-toggle.dawn .toggle-glyph:hover {
+  fill: #ffa001;
+}
+
+.toggle-glyph {
+  text-align: center;
+  width: 24px;
+  margin: 15px auto;
+  transition: all 400ms ease;
+}
+
+.toggle-glyph svg {
+  display: block;
+  transform: scale(1.35);
+}
 
 .navbar-style {
   background-color: rgb(20, 20, 20);
@@ -83,9 +139,8 @@
 
 /* main page / section 1 */
 
-.wrapper {
+.main-page {
   display: flex;
-  flex-direction: row;
   background-image: url("../Assets/Images/Vorderrhein.svg");
   background-blend-mode: soft-light;
   background-color: #b7b1b5;
