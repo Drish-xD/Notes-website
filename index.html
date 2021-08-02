@@ -13,19 +13,27 @@
   </head>
 
   <body>
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-style">
-      <div class="container-fluid d-flex justify-content-center">
-        <a class="nav-link" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#section-2">Notes</a>
-        <a class="nav-brand" href="#">
-          <p>SRM</p>
-          <img src="https://img.icons8.com/clouds/100/000000/book-reading.png" />
-          <p>NOTES</p>
-        </a>
-        <a class="nav-link" href="#">About</a>
-        <a class="nav-link" href="#">Contact</a>
+
+    <nav>
+      <div class="nav-brand">
+        SRM NOTES
       </div>
+      <input id="hamburger" class="hamburger" type="checkbox"/>
+      <label class="hamburger" for="hamburger">
+        <i></i>
+        <text>
+          <close>close</close>
+          <open>menu</open>
+        </text>
+      </label>
+      <section class="drawer-list">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Notes</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </section>
     </nav>
 
     <!-- theme toggle button -->
