@@ -21,6 +21,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #f7f7f7;
+}
+
 .overflow {
   overflow-x: hidden;
 }
@@ -30,13 +34,12 @@ nav {
   z-index: 10000;
   width: 100%;
   height: 80px;
-  background-color: #0f0f0fcc;
 }
 
 .nav-brand {
   font: 2em "spacemono";
   padding: 20px;
-  color: #f8f8f8;
+  color: #0f0f0f;
 }
 
 .drawer-list {
@@ -52,7 +55,7 @@ nav {
   padding-top: 125px;
   transition: width 475ms ease-out, transform 450ms ease, border-radius 0.8s 0.1s ease;
   border-bottom-left-radius: 100vw;
-  background-color: #a77295f2;
+  background-color: #cccccc;
   z-index: 990;
 }
 
@@ -85,7 +88,7 @@ nav {
 
 .drawer-list li a {
   text-decoration: none;
-  color: #fefefe;
+  color: #0f0f0f  ;
   text-align: center;
   display: block;
   padding: 1rem;
@@ -101,7 +104,7 @@ nav {
 
 .drawer-list li a:hover {
   cursor: pointer;
-  background-color: #b686a6;
+  background-color: #dddddd;
 }
 
 input.hamburger {
@@ -150,12 +153,12 @@ input.hamburger:checked ~ label > i:after {
 }
 
 input.hamburger:checked ~ label close {
-  color: #f8f8f8;
+  color: #0f0f0f;
   width: 100%;
 }
 
 input.hamburger:checked ~ label open {
-  color: rgba(0, 0, 0, 0);
+  color: #0f0f0f;
   width: 0;
 }
 
@@ -187,13 +190,13 @@ label.hamburger text open {
 }
 
 label.hamburger text close {
-  color: #00000000;
+  color: #0f0f0f;
   right: 0;
   width: 0;
 }
 
 label.hamburger text open {
-  color: #fefefe;
+  color: #0f0f0f;
   width: 100%;
 }
 
@@ -202,7 +205,7 @@ label.hamburger > i {
   width: 100%;
   height: 3px;
   top: 50%;
-  background-color: #fefefe;
+  background-color: #0f0f0f;
   pointer-events: auto;
   transition-duration: 0.35s;
   transition-delay: 0.35s;
@@ -215,7 +218,7 @@ label.hamburger > i:after {
   width: 70%;
   height: 3px;
   left: 50%;
-  background-color: #fefefe;
+  background-color: #0f0f0f;
   content: "";
   transition: transform 0.35s;
   transform-origin: 50% 50%;
@@ -248,64 +251,6 @@ label.hamburger > i:after {
   background-color: #0f0f0f;
 }
 
-.theme-toggle {
-  position: fixed;
-  bottom: 50px;
-  right: 0;
-  display: block;
-  width: 60px;
-  height: 50px;
-  overflow: hidden;
-  border-radius: 20px 0 0 20px;
-  padding: 0;
-  border: 0;
-  cursor: pointer;
-  outline: none;
-  transition: all 400ms ease;
-  z-index: 10000;
-}
-
-.theme-toggle.dawn {
-  background: rgb(246, 247, 249);
-  filter: drop-shadow(3.4px 3.4px 3.4px rgb(184, 178, 182)) drop-shadow(-3.4px -3.4px 3.4px #dcdcdc);
-  -webkit-filter: drop-shadow(3.4px 3.4px 3.4px #b7b1b5) drop-shadow(-3.4px -3.4px 3.4px #dcdcdc);
-  box-shadow: inset 4.3px 4.3px 7px #fff;
-}
-
-.theme-toggle.dawn .toggle-glyph {
-  fill: #1f242a;
-  transform: rotate(360deg);
-}
-
-.theme-toggle.dusk {
-  background: #1f242a;
-  filter: drop-shadow(3.4px 3.4px 3.4px #3a3a3a4d) drop-shadow(-3.4px -3.4px 3.4px #00000033);
-  /* -webkit-filter: drop-shadow(3.4px 3.4px 3.4px #242424) drop-shadow(-3.4px -3.4px 3.4px #5e5e5e); */
-  box-shadow: inset 4.3px 4.3px 7px #303030;
-}
-
-.theme-toggle.dusk .toggle-glyph {
-  transform: rotate(180deg);
-  fill: #f5f6f8;
-}
-
-.theme-toggle.dusk .toggle-glyph:hover,
-.theme-toggle.dawn .toggle-glyph:hover {
-  fill: #ffa001;
-}
-
-.toggle-glyph {
-  text-align: center;
-  width: 24px;
-  margin: 15px auto;
-  transition: all 400ms ease;
-}
-
-.toggle-glyph svg {
-  display: block;
-  transform: scale(1.35);
-}
-
 /* main page / section 1 */
 
 .main-page {
@@ -313,9 +258,6 @@ label.hamburger > i:after {
   flex-direction: row;
   width: 100%;
   min-height: 100vh;
-  background-image: url("../Assets/Images/Vorderrhein.svg");
-  background-blend-mode: soft-light;
-  background-color: #b7b1b5;
 }
 
 @media (max-width: 768px) {
@@ -351,14 +293,10 @@ label.hamburger > i:after {
 
 .main-img img {
   width: 100%;
+  /* filter: invert(1); */
 }
 
 /* section 2 - 3 */
-
-#section-2,
-#section-3 {
-  background-image: url(../Assets/Images/swirl_pattern.png);
-}
 
 h2 {
   font: 600 60px "Oswald";
@@ -384,7 +322,7 @@ h2 {
   font: 600 30px "spacemono";
   letter-spacing: 0.2rem;
   padding: 50px;
-  color: #0f0f0f;
+  color: #696969;
   text-align: center;
   background-color: #f0f0f0;
   filter: drop-shadow(3.4px 3.4px 3.4px #b7b1b5) drop-shadow(-3.4px -3.4px 3.4px #dcdcdc);
@@ -393,7 +331,7 @@ h2 {
 }
 
 .notes-link:hover {
-  color: #a77295;
+  color: #000;
   filter: drop-shadow(5px 5px 3.4px #b7b1b5);
   -webkit-filter: drop-shadow(5px 5px 3.4px #b7b1b5);
   box-shadow: inset 2.5px 2.5px 2.5px #fff;
@@ -408,8 +346,8 @@ h2 {
 /* footer */
 
 footer {
-  background-color: #111111;
-  padding: 20px;
+  background-color: #cccccc;
+  padding: 20px 0 10px 0;
   font-family: "spacemono";
-  color: #f8f8f8;
+  color: #0f0f0f;
 }
