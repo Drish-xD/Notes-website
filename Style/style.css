@@ -26,8 +26,12 @@ body.light {
   color: #0f0f0f;
 }
 
-.overflow {
-  overflow-x: hidden;
+body.normal {
+  overflow: scroll;
+}
+
+body.hidden {
+  overflow: hidden;
 }
 
 /* Toggle btn */
@@ -81,7 +85,7 @@ body.light {
 /* nav bar */
 
 nav {
-  position: fixed;
+  position: relative;
   z-index: 90;
   width: 100%;
   height: 80px;
@@ -92,7 +96,7 @@ nav {
   padding: 20px;
 }
 
-.drawer-list {
+.drawer-list.light {
   position: fixed;
   right: 0;
   top: 0;
@@ -105,7 +109,7 @@ nav {
   padding-top: 125px;
   transition: width 475ms ease-out, transform 450ms ease, border-radius 0.8s 0.1s ease;
   border-bottom-left-radius: 100vw;
-  background-color: #cccccce6;
+  background-color: #f0f0f0e6;
   z-index: 90;
 }
 
@@ -130,7 +134,7 @@ nav {
   margin-bottom: 2em;
 }
 
-.drawer-list li a {
+.drawer-list.light li a {
   text-decoration: none;
   color: #0f0f0f;
   text-align: right;
@@ -139,7 +143,7 @@ nav {
   font-size: 50px;
 }
 
-.drawer-list li a:hover {
+.drawer-list.light li a:hover {
   cursor: pointer;
   background-color: #cccccc;
 }
@@ -295,8 +299,9 @@ nav {
 }
 
 .main-text {
-  display: grid;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   width: 100%;
   padding: 50px;
 }
@@ -355,20 +360,20 @@ h2 {
   text-align: center;
   background-color: #f0f0f0;
   filter: drop-shadow(3.4px 3.4px 3.4px #b7b1b5) drop-shadow(-3.4px -3.4px 3.4px #dcdcdc);
-  -webkit-filter: drop-shadow(3.4px 3.4px 3.4px #b7b1b5) drop-shadow(-3.4px -3.4px 3.4px #f7f7f7);
+  -webkit-filter: drop-shadow(3.4px 3.4px 3.4px #b7b1b5) drop-shadow(-3.4px -3.4px 3.4px #dcdcdc);
   box-shadow: inset 4.3px 4.3px 7px #fff;
 }
 
 .notes-link.light:hover {
-  color: #000;
+  color: #242424;
   filter: drop-shadow(5px 5px 3.4px #b7b1b5);
   -webkit-filter: drop-shadow(5px 5px 3.4px #b7b1b5);
   box-shadow: inset 2.5px 2.5px 2.5px #fff;
 }
 
 .notes-link.light:active {
-  filter: drop-shadow(0px 0px 0px rgb(183, 177, 181));
-  -webkit-filter: drop-shadow(0px 0px 0px rgb(183, 177, 181));
+  filter: drop-shadow(0px 0px 0px #b7b1b5);
+  -webkit-filter: drop-shadow(0px 0px 0px #b7b1b5);
   box-shadow: inset 4.3px 4.3px 7px #b7b1b5;
 }
 
@@ -384,12 +389,12 @@ footer.light {
 /* Dark Mode Classes */
 
 body.dark {
-  background-color: #0f0f0f;
+  background-color: #202020;
   color: #f7f7f7;
 }
 
 .theme-toggle.dusk {
-  background: #1f242a;
+  background: #252525;
   filter: drop-shadow(3.4px 3.4px 3.4px #242424) drop-shadow(-3.4px -3.4px 3.4px #5e5e5e);
   -webkit-filter: drop-shadow(3.4px 3.4px 3.4px #242424) drop-shadow(-3.4px -3.4px 3.4px #5e5e5e);
   box-shadow: inset 4.3px 4.3px 7px #2b2d30;
@@ -397,7 +402,7 @@ body.dark {
 
 .theme-toggle.dusk .toggle-glyph {
   transform: rotate(180deg);
-  fill: #f5f6f8;
+  fill: #f7f7f7;
 }
 
 .hamburger-icon.dark>i {
@@ -405,7 +410,7 @@ body.dark {
   width: 100%;
   height: 3px;
   top: 50%;
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
   pointer-events: auto;
   transition: transform 0.35s 0.35s;
 }
@@ -417,11 +422,43 @@ body.dark {
   width: 70%;
   height: 3px;
   left: 50%;
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
   content: "";
   transition: transform 0.35s;
   transform-origin: 50% 50%;
 }
+
+.drawer-list.dark {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 40vw;
+  transform: translate(100vw, 0);
+  -ms-transform: translatex(-100vw);
+  box-sizing: border-box;
+  pointer-events: none;
+  padding-top: 125px;
+  transition: width 475ms ease-out, transform 450ms ease, border-radius 0.8s 0.1s ease;
+  border-bottom-left-radius: 100vw;
+  background-color: #292929e6;
+  z-index: 90;
+}
+
+.drawer-list.dark li a {
+  text-decoration: none;
+  color: #f7f7f7;
+  text-align: right;
+  display: block;
+  padding: 1rem;
+  font-size: 50px;
+}
+
+.drawer-list.dark li a:hover {
+  cursor: pointer;
+  background-color: #202020;
+}
+
 
 .notes-link.dark {
   text-decoration: none;
@@ -430,27 +467,27 @@ body.dark {
   padding: 50px;
   color: #a8a8a8;
   text-align: center;
-  background-color: #1f242a;
-  filter: drop-shadow(3.4px 3.4px 3.4px #242424) drop-shadow(-3.4px -3.4px 3.4px #5e5e5e);
-  -webkit-filter: drop-shadow(3.4px 3.4px 3.4px #242424) drop-shadow(-3.4px -3.4px 3.4px #5e5e5e);
-  box-shadow: inset 4.3px 4.3px 7px #fff;
+  background-color: #242424;
+  filter: drop-shadow(3.4px 3.4px 3.4px #202020) drop-shadow(0px 0px 3.4px #282828);
+  -webkit-filter: drop-shadow(3.4px 3.4px 3.4px #202020) drop-shadow(0px 0px 3.4px #282828);
+  box-shadow: inset 4.3px 4.3px 7px #282828;
 }
 
 .notes-link.dark:hover {
-  color: #000;
-  filter: drop-shadow(5px 5px 3.4px #242424);
-  -webkit-filter: drop-shadow(5px 5px 3.4px #242424);
-  box-shadow: inset 2.5px 2.5px 2.5px #fff;
+  color: #f7f7f7;
+  filter: drop-shadow(5px 5px 3.4px #202020);
+  -webkit-filter: drop-shadow(5px 5px 3.4px #202020);
+  box-shadow: inset 2.5px 2.5px 2.5px #282828;
 }
 
 .notes-link.dark:active {
-  filter: drop-shadow(0px 0px 0px #242424);
-  -webkit-filter: drop-shadow(0px 0px 0px #242424);
-  box-shadow: inset 4.3px 4.3px 7px #2c2c2c;
+  filter: drop-shadow(0px 0px 0px #ffffff1a);
+  -webkit-filter: drop-shadow(0px 0px 0px #ffffff1a);
+  box-shadow: inset 4.3px 4.3px 7px #000000cc;
 }
 
 footer.dark {
-  background-color: #1f242a;
+  background-color: #282828;
   padding: 20px 0 10px 0;
   font-family: "spacemono";
 }

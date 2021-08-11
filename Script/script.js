@@ -16,8 +16,19 @@ toggler.addEventListener('click', () => {
     document.querySelector('.main-img').classList.toggle('invert');
     document.querySelector('footer').classList.toggle('light');
     document.querySelector('footer').classList.toggle('dark');
+    document.querySelector('.drawer-list').classList.toggle('light');
+    document.querySelector('.drawer-list').classList.toggle('dark');
     document.querySelectorAll('.notes-link').forEach(function (element) {
         element.classList.toggle("light");
         element.classList.toggle("dark");
     });
 });
+
+// Overflow hidden 
+
+var menu = document.querySelector('.hamburger-icon');
+menu.addEventListener('click', () => {
+    document.body.classList.toggle('normal');
+    document.body.classList.toggle('hidden');
+});
+    
