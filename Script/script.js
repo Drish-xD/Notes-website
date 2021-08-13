@@ -5,20 +5,16 @@ AOS.init();
 // Theme Toggler
 
 var toggler = document.querySelector('.theme-toggle');
+var selection = document.querySelectorAll('body, .drawer-list, .hamburger-icon, .notes-link, .btn, footer');
+
 toggler.addEventListener('click', () => {
     toggler.classList.toggle('dawn');
     toggler.classList.toggle('dusk');
-    document.body.classList.toggle('light');
-    document.body.classList.toggle('dark');
-    document.querySelector('.hamburger-icon').classList.toggle('light');
-    document.querySelector('.hamburger-icon').classList.toggle('dark');
+
     document.querySelector('.main-img').classList.toggle('normal');
     document.querySelector('.main-img').classList.toggle('invert');
-    document.querySelector('footer').classList.toggle('light');
-    document.querySelector('footer').classList.toggle('dark');
-    document.querySelector('.drawer-list').classList.toggle('light');
-    document.querySelector('.drawer-list').classList.toggle('dark');
-    document.querySelectorAll('.notes-link').forEach(function (element) {
+
+    selection.forEach(function (element) {
         element.classList.toggle("light");
         element.classList.toggle("dark");
     });
@@ -31,4 +27,3 @@ menu.addEventListener('click', () => {
     document.body.classList.toggle('normal');
     document.body.classList.toggle('hidden');
 });
-    
