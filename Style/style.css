@@ -20,6 +20,15 @@
   box-sizing: border-box;
 }
 
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 body.light {
   background-color: #f7f7f7;
   color: #0f0f0f;
@@ -123,11 +132,10 @@ nav {
   width: 40vw;
   transform: translate(100vw, 0);
   box-sizing: border-box;
-  pointer-events: none;
   padding-top: 125px;
   transition: width 475ms ease-out, transform 450ms ease, border-radius 0.8s 0.1s ease;
   border-bottom-left-radius: 100vw;
-  z-index: 90;
+  z-index: 99;
 }
 
 .drawer-list.light {
@@ -150,23 +158,26 @@ nav {
   transform: translatex(100vw);
 }
 
+.drawer-list li:hover {
+  background-color: #f7f7f7cc;
+}
+
 .drawer-list li a {
-  font-weight: 500;
-  font-family: 'Butler', serif;
+  font: 500 50px 'Butler', serif;
   text-decoration: none;
   text-align: right;
   display: block;
   padding: 1rem;
-  font-size: 50px;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .drawer-list.light li a {
   color: #0f0f0f;
 }
 
-.drawer-list.light li a:hover {
-  background-color: #f7f7f7cc;
+.drawer-list li a:hover {
+  transform: translateX(-30px);
 }
 
 .hamburger {
@@ -304,7 +315,7 @@ nav {
   text-align: justify;
   width: 100%;
   min-height: 100vh;
-  padding: 0 50px;
+  padding: 0 15px 0 50px;
 }
 
 .main-text h1 {
@@ -314,8 +325,7 @@ nav {
 
 .main-text p {
   margin: 30px 30px 0 0;
-  font-size: 20px;
-  font-family: 'Butler', serif;
+  font: 20px 'Butler', serif;
   word-spacing: 0.3rem;
   line-height: 2.0rem;
   letter-spacing: 1px;
@@ -337,7 +347,7 @@ nav {
 }
 
 .btn {
-  margin: 30px 50px 0 0;
+  margin: 30px 50px 50px 0;
   padding: 15px 30px;
   align-items: center;
   cursor: pointer;
@@ -380,9 +390,10 @@ h2 {
   width: 400px;
   border-radius: 50px;
   margin: 3rem 0;
-  align-items: center;
+  text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
   text-decoration: none;
   cursor: pointer;
   transition: 0.25s;
@@ -443,8 +454,7 @@ body.dark {
   color: #f7f7f7;
 }
 
-.drawer-list.dark li a:hover {
-  cursor: pointer;
+.drawer-list.dark li:hover {
   background-color: #202020;
 }
 
@@ -506,11 +516,7 @@ footer.dark {
   }
 
   .main-text p {
-    margin: 30px 30px 0 0;
-    font-size: 20px;
-    font-family: 'EB Garamond', serif;
-    word-spacing: 0.4rem;
-    line-height: 2.0rem;
+    font-size: 18px;
   }
 }
 
@@ -520,7 +526,17 @@ footer.dark {
   }
 
   .drawer-list li a {
+    font: 500 45px 'Butler', serif;
     text-align: center;
+    padding: 20px 0;
+  }
+
+  .drawer-list li a:hover {
+    transform: none;
+  }
+
+  .hamburger:checked~.drawer-list li a {
+    padding-right: 0;
   }
 
   .hamburger-icon {
@@ -531,9 +547,17 @@ footer.dark {
     flex-direction: column-reverse;
   }
 
+  .main-text {
+    padding: 0 25px;
+  }
+
   .main-text h1 {
-    font-size: 80px;
+    font-size: 70px;
     text-align: center;
+  }
+
+  .main-text p {
+    margin: 0;
   }
 
   h2 {
@@ -545,34 +569,73 @@ footer.dark {
   }
 
   .btn-box {
-    text-align: center;
-  }
-
-  .btn {
-    margin: 30px 50px 0 0;
-  }
-
-  .btn:last-child {
-    margin: 30px 0 0 0;
+    display: inherit;
+    justify-content: center;
   }
 
   .button {
     height: 180px;
-    width: 340px;
-    border-radius: 50px;
-    margin: 3rem 0;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.25s;
-    font: 27px "Butler-Black";
-    letter-spacing: 0.2rem;
-    padding: 50px;
+    width: 300px;
+    margin: 2rem 0;
+    font: 25px "Butler-Black";
   }
 
   footer {
-    font-size: 15px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hamburger-icon {
+    transform: scale(0.65);
+  }
+
+  .main-text h1 {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .normal img {
+    width: 70%;
+  }
+
+  .main-text {
+    padding: 0 15px;
+  }
+
+  .btn-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn {
+    margin: 25px 0;
+  }
+
+  .theme-toggle {
+    width: 50px;
+    height: 42px;
+  }
+
+  .toggle-glyph {
+    margin: 9.5px auto;
+  }
+
+  .toggle-glyph svg {
+    transform: scale(1.2);
+  }
+
+  .button {
+    height: 150px;
+    width: 250px;
+    font: 22px "Butler-Black";
+  }
+
+  footer {
+    font-size: 12px;
   }
 }
