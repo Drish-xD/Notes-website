@@ -333,6 +333,8 @@ nav {
 
 .main-img {
   width: 100%;
+  display: block;
+  margin: auto;
   text-align: center;
 }
 
@@ -356,6 +358,10 @@ nav {
   font: 800 18px "Butler";
   letter-spacing: 0.2rem;
   text-decoration: none;
+}
+
+.btn-box .btn:last-child { 
+  margin: 30px 0 50px 0;
 }
 
 .btn.light {
@@ -418,6 +424,128 @@ h2 {
 .notes-link.light:active {
   filter: drop-shadow(0px 0px 0px #b7b1b5);
   box-shadow: inset 4.3px 4.3px 7px #b7b1b5;
+}
+
+/* Contacts */
+.contacts {
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin: 50px 0; 
+}
+
+.contacts .btn {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 50%;
+}
+
+.iconify {
+  width: 40px;
+  height: auto;
+}
+
+/* Upload.html Css Query */
+
+.Upload-form h4 {
+  font: 600 25px "Butler";
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.form p {
+  font: 600 18px "Butler";
+  display: block;
+  margin: 10px auto;
+  text-transform: capitalize;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.form {
+  width: 600px;
+  font: 17px "Butler";
+  letter-spacing: 0.03em;
+  word-spacing: 1mm;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.form input {
+  font-size: 17px;
+  padding: 20px;
+  border: 0;
+  outline: 0;
+  border-radius: 320px;
+  width: 100%;
+  transition: background 0.3s ease-in-out;
+}
+
+.form input.light {
+  background-color: #EBECF0;
+  text-shadow: 1px 1px 0 #FFF;
+  box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+}
+
+label {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.form button {
+  display: block;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.file-area {
+  width: 100%;
+  position: relative;
+  transition: background 0.3s ease-in-out;
+}
+
+.file-area input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-dummy {
+  width: 100%;
+  padding: 30px;
+  border-radius: 320px;
+  text-align: center;
+}
+
+.file-dummy.light {
+  background: #EBECF0;
+  box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+  transition: background 0.3s ease-in-out;
+}
+
+.file-dummy .success {
+  display: none;
+}
+
+.form input.light:hover,
+.file-area:hover .file-dummy {
+  background: #f7f7f7;
+}
+
+.file-area input[type="file"]:valid+.file-dummy .success {
+  display: inline-block;
+}
+
+.file-area input[type="file"]:valid+.file-dummy .default {
+  display: none;
 }
 
 /* footer */
@@ -504,6 +632,13 @@ body.dark {
   box-shadow: inset 4.3px 4.3px 7px #000000cc;
 }
 
+.form input.dark,
+.file-dummy.dark {
+  background-color: #232323;
+  text-shadow: 1px 1px 0 #000;
+  box-shadow: inset 2px 2px 5px #000, inset -5px -5px 10px #373737;
+}
+
 footer.dark {
   background-color: #282828;
 }
@@ -580,8 +715,40 @@ footer.dark {
     font: 25px "Butler-Black";
   }
 
+  .contacts .btn {
+    padding: 15px;
+  }
+  
+  .iconify {
+    width: 25px;
+  }
+  
   footer {
     font-size: 14px;
+  }
+
+  /* Upload.html */
+
+  .Upload-form h4 {
+    font: 600 20px "Butler";
+  }
+
+  .form p {
+    font: 600 16px "Butler";
+  }
+
+  .form input {
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  .file-dummy {
+    padding: 25px;
+  }
+
+  .form {
+    width: 80%;
+    font: 15px "Butler";
   }
 }
 
@@ -613,6 +780,7 @@ footer.dark {
   }
 
   .btn {
+    font: 800 15px "Butler";
     margin: 25px 0;
   }
 
@@ -637,5 +805,27 @@ footer.dark {
 
   footer {
     font-size: 12px;
+  }
+
+  .contacts .btn {
+    margin: 15px;
+  }
+  
+  .iconify {
+    width: 20px;
+  }
+
+  /* Upload.html */
+
+  .form p {
+    font: 600 14px "Butler";
+  }
+
+  .form input {
+    font-size: 14px;
+  }
+
+  .form {
+    font: 13px "Butler";
   }
 }

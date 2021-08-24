@@ -5,19 +5,17 @@ AOS.init();
 // Theme Toggler
 
 var toggler = document.querySelector('.theme-toggle');
-var selection = document.querySelectorAll('body, .drawer-list, .hamburger-icon, .notes-link, .btn, footer');
+var selection = document.querySelectorAll('body, .drawer-list, .hamburger-icon, .notes-link, .btn, footer, .form input, .file-dummy');
 
 toggler.addEventListener('click', () => {
     toggler.classList.toggle('dawn');
     toggler.classList.toggle('dusk');
-
-    document.querySelector('.main-img').classList.toggle('normal');
-    document.querySelector('.main-img').classList.toggle('invert');
-
     selection.forEach(function (element) {
         element.classList.toggle("light");
         element.classList.toggle("dark");
     });
+    document.querySelector('.main-img').classList.toggle('normal');
+    document.querySelector('.main-img').classList.toggle('invert');
 });
 
 // Overflow hidden 
