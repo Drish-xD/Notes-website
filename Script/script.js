@@ -1,6 +1,11 @@
 // intiialising AOS
 
-AOS.init();
+AOS.init({
+    offset: 100,
+    duration: 1200,
+    once: false,
+});
+
 
 // Theme Toggler
 
@@ -24,4 +29,11 @@ var menu = document.querySelector('.hamburger-icon');
 menu.addEventListener('click', () => {
     document.body.classList.toggle('normal');
     document.body.classList.toggle('hidden');
+});
+
+// hamburger close
+document.querySelectorAll('.drawer-list ul a').forEach(item => {
+    item.addEventListener('click', event => {
+        document.querySelector('.hamburger-icon').click();
+    }, 2000);
 });

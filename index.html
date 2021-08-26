@@ -15,7 +15,7 @@
 
 <body class="light normal">
   <button class="theme-toggle dawn" id="switch">
-    <div class="toggle-glyph">
+    <div class="toggle-glyph" id="svg" onload="rotateImage()">
       <svg width="24" height="64" viewBox="0 0 24 64">
         <circle cx="12" cy="16" r="4" />
         <path d="M12,11h0a1,1,0,0,1-1-1c.08-.63.61-3.45.61-3.45a.4.4,0,0,1,.77,0S12.92,9.37,13,10A1,1,0,0,1,12,11Z" />
@@ -54,7 +54,7 @@
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#Notes">Notes</a></li>
-        <li><a href="Upload.html">Upload</a></li>
+        <li><a href="Upload">Upload</a></li>
         <li><a href="#Contacts">Contact</a></li>
       </ul>
     </div>
@@ -63,42 +63,42 @@
   <!-- Main page / Section 1 -->
   <main class="main-page" id="main-page">
     <div class="main-text">
-      <h1>SRM NOTES ADDA</h1>
-      <p>
+      <h1 data-aos="fade-up">SRM NOTES ADDA</h1>
+      <p data-aos="fade-up" data-aos-delay="400">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque libero laborum eum molestias! Itaque quia
         veritatis omnis voluptatum nulla libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, nulla
         perferendis? Dolor sunt temporibus placeat aliquid, nisi est reiciendis, quis maiores, delectus soluta dolores
         voluptates.
       </p>
       <div class="btn-box">
-        <a class="btn light" href="#Notes"> Notes </a>
-        <a class="btn light" href="Upload">Upload</a>
+        <a class="btn light" href="#Notes" data-aos="fade-up" data-aos-delay="400"> Notes </a>
+        <a class="btn light" href="Upload" data-aos="fade-up" data-aos-delay="400">Upload</a>
       </div>
     </div>
     <div class="main-img normal">
-      <img src="Assets/Images/main.png" alt="Main-image" id="img" />
+      <img data-aos="fade-up" src="Assets/Images/main.png" alt="Main-image" id="img" />
     </div>
   </main>
 
   <!-- Section 2 Notes Year wise -->
   <section id="Notes">
     <div class="container">
-      <h2>Year Wise Notes</h2>
+      <h2 data-aos="fade-in" data-aos-duration="1500">Year Wise Notes</h2>
       <div class="row">
         <div class="col-md-6 d-flex justify-content-center">
-          <a href="#" class="button notes-link light">Year I</a>
+          <a href="#" class="button notes-link light" data-aos="fade-right">Year I</a>
         </div>
         <div class="col-md-6 d-flex justify-content-center">
-          <a href="#" class="button notes-link light">Year II</a>
+          <a href="#" class="button notes-link light" data-aos="fade-left">Year II</a>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-6 d-flex justify-content-center">
-          <a href="#" class="button notes-link light">Year III</a>
+          <a href="#" class="button notes-link light" data-aos="fade-right">Year III</a>
         </div>
         <div class="col-md-6 d-flex justify-content-center">
-          <a href="#" class="button notes-link light">Year IV</a>
+          <a href="#" class="button notes-link light" data-aos="fade-left">Year IV</a>
         </div>
       </div>
     </div>
@@ -107,21 +107,21 @@
   <!-- Section 3 Codeing Notes -->
   <section id="section-3">
     <div class="container">
-      <h2>Coding Notes</h2>
+      <h2 data-aos="fade-in" data-aos-duration="1500">Coding Notes</h2>
       <div class="row">
         <div class="col-md-6 d-flex justify-content-center">
-          <a href="#" class="button notes-link light">C</a>
+          <a href="#" class="button notes-link light" data-aos="fade-right">C</a>
         </div>
         <div class="col-md-6 d-flex justify-content-center">
-          <a href="#" class="button notes-link light">C++</a>
+          <a href="#" class="button notes-link light" data-aos="fade-left">C++</a>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 d-flex justify-content-center">
-          <a href="#" class="button notes-link light">Data structure</a>
+          <a href="#" class="button notes-link light" data-aos="fade-right">Data structure</a>
         </div>
         <div class="col-md-6 d-flex justify-content-center">
-          <a href="#" class="button notes-link light">Ebooks</a>
+          <a href="#" class="button notes-link light" data-aos="fade-left">Ebooks</a>
         </div>
       </div>
     </div>
@@ -129,11 +129,11 @@
 
   <section id="Contacts">
     <div class="contacts">
-      <h2>Connect With US</h2>
-      <a class="btn light" href="mailto:">
+      <h2 data-aos="fade-in" data-aos-duration="1500">Connect With US</h2>
+      <a class="btn light" href="mailto:" data-aos="fade-up" data-aos-delay="200">
         <span class="iconify" data-icon="simple-icons:gmail"></span>
       </a>
-      <a class="btn light" href="http://">
+      <a class="btn light" href="http://" data-aos="fade-up" data-aos-delay="200">
         <span class="iconify" data-icon="akar-icons:discord-fill"></span>
       </a>
   </section>
