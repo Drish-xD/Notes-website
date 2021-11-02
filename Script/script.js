@@ -25,9 +25,9 @@ document.querySelectorAll('.drawer-list ul a').forEach(item => {
 
 var toggler = document.querySelector('.theme-toggle');
 var selection = document.querySelectorAll('body, .drawer-list, .hamburger-icon, .notes-link, .btn, footer, .form input, .file-dummy');
+let theme = localStorage.getItem('data-theme')
 
 const changeThemeToDark = () => {
-    console.log("dark");
     toggler.classList.remove('dawn');
     toggler.classList.add('dusk');
     selection.forEach(function (element) {
@@ -40,7 +40,6 @@ const changeThemeToDark = () => {
 }
 
 const changeThemeToLight = () => {
-    console.log("llight");
     toggler.classList.add('dawn');
     toggler.classList.remove('dusk');
     selection.forEach(function (element) {
