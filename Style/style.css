@@ -304,6 +304,8 @@ nav {
 .main-page {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   min-height: 90vh;
   margin-bottom: 50px;
@@ -319,7 +321,7 @@ nav {
 }
 
 .main-text h1 {
-  font-size: 125px;
+  font-size: 10rem;
   font-family: 'Butler-Black', serif;
 }
 
