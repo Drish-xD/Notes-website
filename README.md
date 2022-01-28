@@ -1,3 +1,3 @@
 # Notes Website Template 
 
-![Screenshot](https://github.com/Drish-xD/Notes-website/blob/master/Assets/Images/Screenshot.png "Screenshot")
+![Screenshot](https://raw.githubusercontent.com/Drish-xD/Notes-website/main/Assets/Images/Screenshot.png "Screenshot")
